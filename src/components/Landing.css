@@ -1,0 +1,107 @@
+/* Landing.css */
+
+/* General styles for the body */
+body {
+  margin: 0;
+  font-family: 'Helvetica', sans-serif;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Header styles */
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0); /* Fully transparent */
+  z-index: 10;
+  justify-content: space-between; /* Space between items */
+}
+
+.header img {
+  height: 40px; /* Adjust the logo height */
+  margin-right: 15px; /* Space between logo and heading */
+}
+
+.header h1 {
+  font-size: 24px;
+  color: white;
+  transition: color 0.3s;
+}
+
+.header h1:hover {
+  color: rgba(253, 139, 81, 0.8); /* Change color on hover */
+}
+
+.header button {
+  background-color: transparent; /* Transparent button */
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  transition: color 0.3s;
+}
+
+.header button:hover {
+  color: rgba(253, 139, 81, 0.8); /* Change color on hover */
+}
+
+/* Slideshow container styles */
+.slideshow-container {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  align-items: center; /* Center vertically */
+  justify-content: center; /* Center horizontally */
+}
+
+.mySlides {
+  position: absolute; /* Make all images overlap */
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0; /* Start hidden */
+  transition: opacity 1s ease-in-out; /* Smooth transition for images */
+}
+
+.mySlides.active {
+  opacity: 1; /* Show the active slide */
+}
+
+/* Info overlay styles */
+.info-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent background */
+  color: white; /* Text color */
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  z-index: 20; /* Ensure it appears above the images */
+}
+
+/* Button styles */
+.start-button {
+  margin-top: 20px; /* Space above button */
+  padding: 15px 30px; /* Padding for the button */
+  background-color: rgba(253, 139, 81, 0.8); /* Button background color */
+  color: white; /* Button text color */
+  border: none;
+  border-radius: 25px; /* Rounded corners */
+  font-size: 18px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s; /* Smooth transition */
+}
+
+.start-button:hover {
+  background-color: rgba(253, 139, 81, 1); /* Darker on hover */
+  transform: scale(1.05); /* Slightly enlarge on hover */
+}
